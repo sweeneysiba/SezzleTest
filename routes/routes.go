@@ -22,6 +22,14 @@ func SetupRouter() *gin.Engine {
 			controller.UserList(c)
 		})
 	}
+
+	grp3 := r.Group("/cart")
+	{
+		grp3.POST("list", func(c *gin.Context) {
+			controller.ListCart(c)
+		})
+
+	}
 	grp2 := r.Group("/item")
 	{
 		grp2.GET("list", func(c *gin.Context) {
@@ -30,13 +38,6 @@ func SetupRouter() *gin.Engine {
 		grp2.POST("create", func(c *gin.Context) {
 			controller.CreateItem(c)
 		})
-	}
-	grp3 := r.Group("/cart")
-	{
-		grp3.GET("list", func(c *gin.Context) {
-			controller.ListCart(c)
-		})
-
 	}
 	grp4 := r.Group("/order")
 	{

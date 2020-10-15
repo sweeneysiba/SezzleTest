@@ -6,10 +6,10 @@
 
 Get Request
     http://127.0.0.1:8080/order/list
-    http://127.0.0.1:8080/cart/1602752657037971475/complete     token required
     http://127.0.0.1:8080/item/list
     http://127.0.0.1:8080/user/list
-    http://127.0.0.1:8080/cart/list
+    http://127.0.0.1:8080/cart/1602752657037971475/complete     token required
+
 Post Request 
     
     http://127.0.0.1:8080/user/create
@@ -35,3 +35,5 @@ Post Request
             "name": "item 3"
         }
     ]
+    http://127.0.0.1:8080/cart/list
+
